@@ -20,5 +20,7 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Send.Func
         /// retrying to send the message.
         /// </summary>
         public double SendRetryDelayNumberOfSeconds { get; set; }
+
+        public string ReportingFunctionUrl { get; set; }
     }
 }

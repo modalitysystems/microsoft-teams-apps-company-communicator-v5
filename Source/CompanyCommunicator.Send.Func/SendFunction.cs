@@ -7,6 +7,7 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Send.Func
 {
     using System;
     using System.Threading.Tasks;
+    using AdaptiveCards;
     using Microsoft.Azure.WebJobs;
     using Microsoft.Bot.Builder;
     using Microsoft.Bot.Schema;
@@ -38,6 +39,7 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Send.Func
 
         private readonly int maxNumberOfAttempts;
         private readonly double sendRetryDelayNumberOfSeconds;
+        private readonly string reportingFunctionUrl;
         private readonly INotificationService notificationService;
         private readonly ISendingNotificationDataRepository notificationRepo;
         private readonly IMessageService messageService;
@@ -68,6 +70,7 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Send.Func
 
             this.maxNumberOfAttempts = options.Value.MaxNumberOfAttempts;
             this.sendRetryDelayNumberOfSeconds = options.Value.SendRetryDelayNumberOfSeconds;
+            this.reportingFunctionUrl = options.Value.ReportingFunctionUrl;
 
             this.notificationService = notificationService ?? throw new ArgumentNullException(nameof(notificationService));
             this.messageService = messageService ?? throw new ArgumentNullException(nameof(messageService));
@@ -254,13 +257,31 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Send.Func
                 NotificationDataTableNames.SendingNotificationsPartition,
                 message.NotificationId);
 
+            AdaptiveCard card = JsonConvert.DeserializeObject<AdaptiveCard>(notification.Content);
+            card = this.AddReportingImageToCard(message, card);
+
             var adaptiveCardAttachment = new Attachment()
             {
                 ContentType = AdaptiveCardContentType,
-                Content = JsonConvert.DeserializeObject(notification.Content),
+                Content = card,
             };
 
             return MessageFactory.Attachment(adaptiveCardAttachment);
+        }
+
+        private AdaptiveCard AddReportingImageToCard(SendQueueMessageContent message, AdaptiveCard card)
+        {
+            var reportingImageUrl = new Uri(this.reportingFunctionUrl, UriKind.RelativeOrAbsolute);
+            reportingImageUrl = UriExtensions.AddParameter(reportingImageUrl, "notification", message.NotificationId);
+            reportingImageUrl = UriExtensions.AddParameter(reportingImageUrl, "random", Guid.NewGuid().ToString());
+            card.Body.Add(new AdaptiveImage()
+            {
+                Url = reportingImageUrl,
+                Spacing = AdaptiveSpacing.Default,
+                Size = AdaptiveImageSize.Auto,
+                AltText = string.Empty,
+            });
+            return card;
         }
     }
 }

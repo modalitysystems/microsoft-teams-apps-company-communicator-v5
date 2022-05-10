@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AzureFunctionsVersion>v3</AzureFunctionsVersion>
+		<UserSecretsId>648f767a-cbe6-461c-ae65-3e9f4827873c</UserSecretsId>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="image.jpg" />
+		<None Remove="local.settings.json" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+		<PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
+		<PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\CompanyCommunicator.Common\Microsoft.Teams.Apps.CompanyCommunicator.Common.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="host.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="reportImage.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>
