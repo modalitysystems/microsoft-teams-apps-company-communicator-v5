@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.Apps.Compan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.App.CompanyCommunicator.Common.Test", "Test\CompanyCommunicator.Common.Test\Microsoft.Teams.App.CompanyCommunicator.Common.Test.csproj", "{B30048CC-3631-49F1-AF01-6A58F645C6EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func", "Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func\Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func.csproj", "{DEC30166-56F2-4419-9380-5E924A3F3291}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func", "CompanyCommunicator.ReportImage.Func\Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func.csproj", "{9DE485FA-C864-4A28-A006-ABDD9342F4B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,10 +79,10 @@ Global
 		{B30048CC-3631-49F1-AF01-6A58F645C6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B30048CC-3631-49F1-AF01-6A58F645C6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B30048CC-3631-49F1-AF01-6A58F645C6EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEC30166-56F2-4419-9380-5E924A3F3291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEC30166-56F2-4419-9380-5E924A3F3291}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEC30166-56F2-4419-9380-5E924A3F3291}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEC30166-56F2-4419-9380-5E924A3F3291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE485FA-C864-4A28-A006-ABDD9342F4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE485FA-C864-4A28-A006-ABDD9342F4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE485FA-C864-4A28-A006-ABDD9342F4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE485FA-C864-4A28-A006-ABDD9342F4B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
