@@ -2,16 +2,26 @@
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<AzureFunctionsVersion>v3</AzureFunctionsVersion>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DockerFastModeProjectMountDirectory>/home/site/wwwroot</DockerFastModeProjectMountDirectory>
 		<UserSecretsId>648f767a-cbe6-461c-ae65-3e9f4827873c</UserSecretsId>
+		<AssemblyName>Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func</AssemblyName>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Remove="image.jpg" />
-		<None Remove="local.settings.json" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
-		<PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
+		<PackageReference Include="Microsoft.Azure.WebJobs.Extensions.DurableTask" Version="2.3.0" />
+		<PackageReference Include="Microsoft.Azure.WebJobs.Extensions.ServiceBus" Version="3.0.3" />
+		<PackageReference Include="Microsoft.Azure.WebJobs.Host.Storage" Version="3.0.14" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="3.1.8" />
+		<PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.12.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.0" />
+		<PackageReference Include="Microsoft.Graph" Version="3.22.0" />
 		<PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+		<PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.10" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\CompanyCommunicator.Common\Microsoft.Teams.Apps.CompanyCommunicator.Common.csproj" />
@@ -19,6 +29,10 @@
 	<ItemGroup>
 		<None Update="host.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="local.settings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>Never</CopyToPublishDirectory>
 		</None>
 		<None Update="reportImage.jpg">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

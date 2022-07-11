@@ -25,6 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.Apps.Compan
 		{069D255F-37E5-49DA-90D2-E3942C64970C} = {069D255F-37E5-49DA-90D2-E3942C64970C}
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func", "CompanyCommunicator.ReportImage.Func\Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func.csproj", "{9DE485FA-C864-4A28-A006-ABDD9342F4B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{069D255F-37E5-49DA-90D2-E3942C64970C} = {069D255F-37E5-49DA-90D2-E3942C64970C}
+	EndProjectSection
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{351E3064-5E5C-4AC4-AB1F-D4FDFF162749}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.Apps.CompanyCommunicator.Prep.Func.Test", "Test\CompanyCommunicator.Prep.Func.Test\Microsoft.Teams.Apps.CompanyCommunicator.Prep.Func.Test.csproj", "{B28BD9B9-BBB0-43E3-8BD1-9F4A0B9841C3}"
@@ -34,8 +39,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.Apps.CompanyCommunicator.Test", "Test\CompanyCommunicator.Test\Microsoft.Teams.Apps.CompanyCommunicator.Test.csproj", "{4182F62C-B7FF-4251-8123-CD442C477FB3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.App.CompanyCommunicator.Common.Test", "Test\CompanyCommunicator.Common.Test\Microsoft.Teams.App.CompanyCommunicator.Common.Test.csproj", "{B30048CC-3631-49F1-AF01-6A58F645C6EB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func", "CompanyCommunicator.ReportImage.Func\Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func.csproj", "{9DE485FA-C864-4A28-A006-ABDD9342F4B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
