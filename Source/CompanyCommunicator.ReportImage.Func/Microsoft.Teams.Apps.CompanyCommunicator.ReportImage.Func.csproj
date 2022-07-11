@@ -5,6 +5,7 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<DockerFastModeProjectMountDirectory>/home/site/wwwroot</DockerFastModeProjectMountDirectory>
 		<UserSecretsId>648f767a-cbe6-461c-ae65-3e9f4827873c</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<AssemblyName>Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func</AssemblyName>
 	</PropertyGroup>
 	<ItemGroup>
