@@ -1,0 +1,107 @@
+[
+  {
+    "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "AzureWebJobsStorage",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "CleanUpFile",
+    "value": "1",
+    "slotSetting": false
+  },
+  {
+    "name": "CleanUpScheduleTriggerTime",
+    "value": "30 23 * * *",
+    "slotSetting": false
+  },
+  {
+    "name": "DOTNET_ADD_GLOBAL_TOOLS_TO_PATH",
+    "value": "false",
+    "slotSetting": false
+  },
+  {
+    "name": "FUNCTIONS_EXTENSION_VERSION",
+    "value": "~3",
+    "slotSetting": false
+  },
+  {
+    "name": "FUNCTIONS_WORKER_RUNTIME",
+    "value": "dotnet",
+    "slotSetting": false
+  },
+  {
+    "name": "i18n:DefaultCulture",
+    "value": "en-US",
+    "slotSetting": false
+  },
+  {
+    "name": "i18n:SupportedCultures",
+    "value": "ar-SA,de-DE,en-US,es-ES,fr-FR,he-IL,ja-JP,ko-KR,pt-BR,ru-RU,zh-CN,zh-TW",
+    "slotSetting": false
+  },
+  {
+    "name": "IsItExpectedThatTableAlreadyExists",
+    "value": "True",
+    "slotSetting": false
+  },
+  {
+    "name": "ProactivelyInstallUserApp",
+    "value": "True",
+    "slotSetting": false
+  },
+  {
+    "name": "PROJECT",
+    "value": "Source\\Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func\\Microsoft.Teams.Apps.CompanyCommunicator.ReportImage.Func.csproj",
+    "slotSetting": false
+  },
+  {
+    "name": "SITE_ROLE",
+    "value": "function",
+    "slotSetting": false
+  },
+  {
+    "name": "StorageAccountConnectionString",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "StorageAccountName",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "UseCertificate",
+    "value": "false",
+    "slotSetting": false
+  },
+  {
+    "name": "UseManagedIdentity",
+    "value": "true",
+    "slotSetting": false
+  },
+  {
+    "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+    "value": "",
+    "slotSetting": false
+  },
+  {
+    "name": "WEBSITE_CONTENTSHARE",
+    "value": "ey-company-comm-reportimage-function",
+    "slotSetting": false
+  },
+  {
+    "name": "WEBSITE_LOAD_CERTIFICATES",
+    "value": "*",
+    "slotSetting": false
+  },
+  {
+    "name": "WEBSITE_NODE_DEFAULT_VERSION",
+    "value": "10.15.2",
+    "slotSetting": false
+  }
+]
